@@ -1,0 +1,59 @@
+{
+    "name": "roberts/work-comp",
+    "description": "Laravel package for Workers Compensation Insurance",
+    "keywords": [
+        "roberts",
+        "work-comp"
+    ],
+    "homepage": "https://github.com/roberts/work-comp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Drew Roberts",
+            "email": "packages@drewroberts.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "tipoff/authorization": "^2.0.1",
+        "tipoff/support": "^1.4.11"
+    },
+    "require-dev": {
+        "tipoff/test-support": "^1.0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Roberts\\WorkComp\\": "src",
+            "Roberts\\WorkComp\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Roberts\\WorkComp\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Roberts\\WorkComp\\WorkCompServiceProvider"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
