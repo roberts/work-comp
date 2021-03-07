@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Roberts\WorkComp\Tests;
 
 use Laravel\Nova\NovaCoreServiceProvider;
-use Roberts\WorkComp\WorkCompServiceProvider;
 use Roberts\WorkComp\Tests\Support\Providers\NovaTestbenchServiceProvider;
+use Roberts\WorkComp\WorkCompServiceProvider;
 use Tipoff\Support\SupportServiceProvider;
 use Tipoff\TestSupport\BaseTestCase;
 
