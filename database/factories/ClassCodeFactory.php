@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Roberts\WorkComp\Models\ClassCode;
 
-class CartFactory extends Factory
+class ClassCodeFactory extends Factory
 {
     protected $model = ClassCode::class;
 
