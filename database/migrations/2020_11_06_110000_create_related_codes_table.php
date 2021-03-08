@@ -16,8 +16,8 @@ class CreateRelatedCodesTable extends Migration
             $table->foreignId('related_code_id')->references('id')->on('class_codes');
             $table->string('usage')->nullable();
             $table->unsignedTinyInteger('priority');
-            $table->foreignId('creator_id')->references('id')->on('users');
-            $table->foreignId('updater_id')->references('id')->on('users');
+            $table->foreignIdFor(app('user'), 'creator_id');
+            $table->foreignIdFor(app('user'), 'updater_id');
             $table->timestamps();
         });
     }

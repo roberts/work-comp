@@ -18,8 +18,8 @@ class CreateClassCodesTable extends Migration
             $table->string('phraseology');
             $table->text('description')->nullable();
             $table->boolean('construction');
-            $table->foreignId('creator_id')->references('id')->on('users');
-            $table->foreignId('updater_id')->references('id')->on('users');
+            $table->foreignIdFor(app('user'), 'creator_id');
+            $table->foreignIdFor(app('user'), 'updater_id');
             $table->timestamps();
         });
     }
