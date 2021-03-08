@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Roberts\WorkComp\Models;
 
-use Roberts\WorkComp\Models\ClassCode;
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Traits\HasCreator;
 // use Tipoff\Support\Traits\HasPackageFactory;
