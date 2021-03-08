@@ -2,6 +2,9 @@
 
 All notable changes to `work-comp` will be documented in this file.
 
-## 1.0.0 - 2021-0X-XX
+## 1.0.0 - 2021-03-08
 
 - initial release
+- run migrations from package
+- add models
+- add factories
