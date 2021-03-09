@@ -13,7 +13,7 @@ class CreateRelatedCodesTable extends Migration
     {
         Schema::create('related_codes', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(ClassCode::class, 'class_code_id');
+            $table->foreignIdFor(ClassCode::class);
             $table->foreignIdFor(ClassCode::class, 'related_code_id');
             $table->string('usage')->nullable();
             $table->unsignedTinyInteger('priority');
