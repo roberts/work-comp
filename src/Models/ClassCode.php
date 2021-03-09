@@ -45,9 +45,9 @@ class ClassCode extends BaseModel
         $this->title = 'Class Code ' . $this->name;
     }
 
-    public function rates()
+    public function wc_rates()
     {
-        return $this->hasMany(Rate::class);
+        return $this->hasMany(WcRate::class);
     }
 
     public function related_codes()

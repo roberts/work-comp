@@ -14,9 +14,9 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 use Tipoff\Support\Nova\BaseResource;
 
-class Rate extends BaseResource
+class WcRate extends BaseResource
 {
-    public static $model = \Roberts\WorkComp\Models\Rate::class;
+    public static $model = \Roberts\WorkComp\Models\WcRate::class;
 
     public static $title = 'id';
 

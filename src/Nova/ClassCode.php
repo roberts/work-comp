@@ -49,7 +49,7 @@ class ClassCode extends BaseResource
             Textarea::make('Description')->rows(10)->alwaysShow()->nullable(),
             Boolean::make('Construction')->nullable(),
 
-            HasMany::make('Rates'),
+            HasMany::make('WcRates'),
 
             HasMany::make('Related Codes', 'related_codes', \Roberts\WorkComp\Nova\ClassCode::class),
 

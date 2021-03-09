@@ -6,11 +6,11 @@ namespace Tipoff\Checkout\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Roberts\WorkComp\Models\ClassCode;
-use Roberts\WorkComp\Models\Rate;
+use Roberts\WorkComp\Models\WcRate;
 
-class RateFactory extends Factory
+class WcRateFactory extends Factory
 {
-    protected $model = Rate::class;
+    protected $model = WcRate::class;
 
     public function definition()
     {
