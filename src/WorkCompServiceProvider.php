@@ -21,8 +21,8 @@ class WorkCompApiServiceProvider extends TipoffServiceProvider
                 WcRate::class => WcRatePolicy::class,
             ])
             ->hasNovaResources([
-                \Tipoff\Bookings\Nova\ClassCode::class,
-                \Tipoff\Bookings\Nova\WcRate::class,
+                \Roberts\WorkComp\Nova\ClassCode::class,
+                \Roberts\WorkComp\Nova\WcRate::class,
             ])
             ->name('work-comp')
             ->hasConfigFile();

@@ -8,7 +8,7 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 use Roberts\WorkComp\Models\WcRate;
 use Tipoff\Support\Contracts\Models\UserInterface;
 
-class RatePolicy
+class WcRatePolicy
 {
     use HandlesAuthorization;
 
