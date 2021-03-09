@@ -20,6 +20,7 @@ class CreateClassCodesTable extends Migration
             $table->boolean('construction');
             $table->foreignIdFor(app('user'), 'creator_id');
             $table->foreignIdFor(app('user'), 'updater_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

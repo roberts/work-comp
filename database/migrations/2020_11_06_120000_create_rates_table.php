@@ -16,6 +16,7 @@ class CreateRatesTable extends Migration
             $table->unsignedInteger('amount'); // In cents.
             $table->foreignIdFor(app('user'), 'creator_id');
             $table->foreignIdFor(app('user'), 'updater_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
