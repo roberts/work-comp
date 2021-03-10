@@ -11,7 +11,7 @@ use Roberts\WorkComp\Policies\WcRatePolicy;
 use Tipoff\Support\TipoffPackage;
 use Tipoff\Support\TipoffServiceProvider;
 
-class WorkCompApiServiceProvider extends TipoffServiceProvider
+class WorkCompServiceProvider extends TipoffServiceProvider
 {
     public function configureTipoffPackage(TipoffPackage $package): void
     {
