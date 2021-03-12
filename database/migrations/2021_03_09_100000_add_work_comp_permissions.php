@@ -12,11 +12,11 @@ class AddWorkCompPermissions extends BasePermissionsMigration
             'view class codes' => ['Owner', 'Staff'],
             'create class codes' => ['Owner'],
             'update class codes' => ['Owner'],
-            'delete class codes' => [],   // Admin only
+            'delete class codes' => ['Owner'],
             'view wc rates' => ['Owner', 'Staff'],
             'create wc rates' => ['Owner'],
             'update wc rates' => ['Owner'],
-            'delete wc rates' => [],   // Admin only
+            'delete wc rates' => ['Owner'],
         ];
 
         $this->createPermissions($permissions);
