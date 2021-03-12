@@ -12,3 +12,7 @@ All notable changes to `work-comp` will be documented in this file.
 ## 1.0.1 - 2021-03-10
 
 - fix package service provider
+
+## 1.0.2 - 2021-03-12
+
+- update permissions
