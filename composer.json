@@ -16,7 +16,10 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
+        "drewroberts/blog": "^4.2.0",
+        "drewroberts/media": "^3.3.0",
         "tipoff/authorization": "^2.5.1",
+        "tipoff/seo": "^2.1.0",
         "tipoff/support": "^1.6.0"
     },
     "require-dev": {
