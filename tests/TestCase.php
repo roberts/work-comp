@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Roberts\WorkComp\Tests;
 
 use Laravel\Nova\NovaCoreServiceProvider;
-use Roberts\WorkComp\Tests\Support\Providers\NovaTestbenchServiceProvider;
 use Roberts\WorkComp\WorkCompServiceProvider;
 use Tipoff\Support\SupportServiceProvider;
 use Tipoff\TestSupport\BaseTestCase;
+use Tipoff\TestSupport\Providers\NovaPackageServiceProvider;
 
 class TestCase extends BaseTestCase
 {
@@ -16,7 +16,7 @@ class TestCase extends BaseTestCase
     {
         return [
             NovaCoreServiceProvider::class,
-            NovaTestbenchServiceProvider::class,
+            NovaPackageServiceProvider::class,
             WorkCompServiceProvider::class,
             SupportServiceProvider::class,
         ];
