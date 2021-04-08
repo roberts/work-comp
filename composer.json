@@ -16,14 +16,14 @@
     ],
     "require": {
         "php": "^7.4|^8.0",
-        "drewroberts/blog": "^4.2.2",
-        "drewroberts/media": "^3.4.0",
+        "drewroberts/blog": "^4.3.0",
+        "drewroberts/media": "^3.4.1",
         "tipoff/authorization": "^2.7.1",
-        "tipoff/seo": "^2.4.0",
-        "tipoff/support": "^1.8.8"
+        "tipoff/seo": "^2.5.2",
+        "tipoff/support": "^1.8.9"
     },
     "require-dev": {
-        "tipoff/test-support": "^1.4.1"
+        "tipoff/test-support": "^1.4.2"
     },
     "autoload": {
         "psr-4": {
