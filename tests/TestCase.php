@@ -6,6 +6,9 @@ namespace Roberts\WorkComp\Tests;
 
 use Laravel\Nova\NovaCoreServiceProvider;
 use Roberts\WorkComp\WorkCompServiceProvider;
+use Spatie\Permission\PermissionServiceProvider;
+use Tipoff\Authorization\AuthorizationServiceProvider;
+use Tipoff\Seo\SeoServiceProvider;
 use Tipoff\Support\SupportServiceProvider;
 use Tipoff\TestSupport\BaseTestCase;
 use Tipoff\TestSupport\Providers\NovaPackageServiceProvider;
@@ -17,6 +20,8 @@ class TestCase extends BaseTestCase
         return [
             NovaCoreServiceProvider::class,
             NovaPackageServiceProvider::class,
+            PermissionServiceProvider::class,
+            AuthorizationServiceProvider::class,
             WorkCompServiceProvider::class,
             SupportServiceProvider::class,
         ];
