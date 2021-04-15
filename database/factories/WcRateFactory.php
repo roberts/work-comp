@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tipoff\Checkout\Database\Factories;
+namespace Roberts\WorkComp\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Roberts\WorkComp\Models\ClassCode;

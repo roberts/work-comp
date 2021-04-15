@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Roberts\WorkComp;
 
+use Illuminate\Support\Facades\Route;
 use Roberts\WorkComp\Models\ClassCode;
 use Roberts\WorkComp\Models\WcRate;
 use Roberts\WorkComp\Policies\ClassCodePolicy;
@@ -13,6 +14,15 @@ use Tipoff\Support\TipoffServiceProvider;
 
 class WorkCompServiceProvider extends TipoffServiceProvider
 {
+    public function boot()
+    {
+        parent::boot();
+
+        Route::group(['middleware' => 'web'], function () {
+            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        });
+    }
+
     public function configureTipoffPackage(TipoffPackage $package): void
     {
         $package
@@ -25,6 +35,7 @@ class WorkCompServiceProvider extends TipoffServiceProvider
                 \Roberts\WorkComp\Nova\WcRate::class,
             ])
             ->name('work-comp')
+            ->hasViews()
             ->hasConfigFile();
     }
 }
