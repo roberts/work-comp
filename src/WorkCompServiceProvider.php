@@ -14,15 +14,6 @@ use Tipoff\Support\TipoffServiceProvider;
 
 class WorkCompServiceProvider extends TipoffServiceProvider
 {
-    public function boot()
-    {
-        parent::boot();
-
-        Route::group(['middleware' => 'web'], function () {
-            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
-        });
-    }
-
     public function configureTipoffPackage(TipoffPackage $package): void
     {
         $package
@@ -37,5 +28,14 @@ class WorkCompServiceProvider extends TipoffServiceProvider
             ->name('work-comp')
             ->hasViews()
             ->hasConfigFile();
+    }
+    
+    public function bootingPackage()
+    {
+        parent::bootingPackage();
+
+        Route::group(['middleware' => 'web'], function () {
+            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        });
     }
 }
