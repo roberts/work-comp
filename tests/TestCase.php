@@ -4,8 +4,15 @@ declare(strict_types=1);
 
 namespace Roberts\WorkComp\Tests;
 
+use DrewRoberts\Blog\BlogServiceProvider;
+use DrewRoberts\Media\MediaServiceProvider;
 use Laravel\Nova\NovaCoreServiceProvider;
+use Livewire\LivewireServiceProvider;
 use Roberts\WorkComp\WorkCompServiceProvider;
+use Spatie\Permission\PermissionServiceProvider;
+use Tipoff\Addresses\AddressesServiceProvider;
+use Tipoff\Authorization\AuthorizationServiceProvider;
+use Tipoff\Seo\SeoServiceProvider;
 use Tipoff\Support\SupportServiceProvider;
 use Tipoff\TestSupport\BaseTestCase;
 use Tipoff\TestSupport\Providers\NovaPackageServiceProvider;
@@ -17,8 +24,15 @@ class TestCase extends BaseTestCase
         return [
             NovaCoreServiceProvider::class,
             NovaPackageServiceProvider::class,
-            WorkCompServiceProvider::class,
             SupportServiceProvider::class,
+            PermissionServiceProvider::class,
+            AuthorizationServiceProvider::class,
+            LivewireServiceProvider::class,
+            AddressesServiceProvider::class,
+            MediaServiceProvider::class,
+            SeoServiceProvider::class,
+            BlogServiceProvider::class,
+            WorkCompServiceProvider::class,
         ];
     }
 }

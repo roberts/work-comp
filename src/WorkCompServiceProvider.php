@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Roberts\WorkComp;
 
+use Illuminate\Support\Facades\Route;
 use Roberts\WorkComp\Models\ClassCode;
 use Roberts\WorkComp\Models\WcRate;
 use Roberts\WorkComp\Policies\ClassCodePolicy;
@@ -25,6 +26,16 @@ class WorkCompServiceProvider extends TipoffServiceProvider
                 \Roberts\WorkComp\Nova\WcRate::class,
             ])
             ->name('work-comp')
+            ->hasViews()
             ->hasConfigFile();
+    }
+    
+    public function bootingPackage()
+    {
+        parent::bootingPackage();
+
+        Route::group(['middleware' => 'web'], function () {
+            $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        });
     }
 }
