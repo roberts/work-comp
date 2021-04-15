@@ -17,7 +17,7 @@ class ShowClassCodeTest extends TestCase
 
         $this->get("/insurance/class-codes/{$classCode->getRouteKey()}")
             ->assertOk()
-            ->assertViewIs('class_codes.show')
+            ->assertViewIs('work-comp::class_codes.show')
             ->assertViewHas(['classCode' => $classCode])
             ->assertSee($classCode->title);
     }
