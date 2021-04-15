@@ -19,6 +19,7 @@ class ShowClassCodeTest extends TestCase
             ->assertOk()
             ->assertViewIs('work-comp::class_codes.show')
             ->assertViewHas(['classCode' => $classCode])
-            ->assertSee($classCode->title);
+            ->assertSee($classCode->title)
+            ->assertSessionHasErrors($classCode->phraseology);
     }
 }
