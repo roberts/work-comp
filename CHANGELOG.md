@@ -26,3 +26,7 @@ All notable changes to `work-comp` will be documented in this file.
 - grant permissions to roles
 - add nova resources
 - register nova resources
+
+## 2.0.1 - 2021-04-15
+
+- extend amp skeleton structure
